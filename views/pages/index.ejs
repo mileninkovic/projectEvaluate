@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body>
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div>
+    <h1>Auto-Eval</h1>
+    <form action="/" method="post">
+
+            URL: <input type="text" name="url"/><br><br>
+            <input type="submit" value="Go!"/><br><br><hr>
+
+    </form>
+
+    <h1><%= URLName %></h1>
+
+    <h2>Lighthouse Scores</h2>
+    <span>Performance: <%= funcResultsPerformance %> </span> <br>
+    <span>Accessibility: <%= funcResultsAccessibility %> </span> <br>
+    <span>Best Practice: <%= funcResultsBestPractice %> </span> <br>
+    <span>SEO: <%= funcResultsSEO %> </span> <br>
+
+    <h2>WAVE Scores</h2>
+    <span>Errors: <%= funcResultsErrors %> </span> <br>
+    <span>Contrast Errors: <%= funcResultsContrastErrors %> </span> <br>
+
+  </div>
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
